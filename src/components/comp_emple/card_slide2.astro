@@ -1,0 +1,48 @@
+---
+import Card1 from './Card2.astro'
+interface Props {
+  title?: string;
+  body?: string;
+  href?: string;
+  tags?: string;
+}
+
+const { href, title, body, tags } = Astro.props;
+
+---
+
+<section class="bg-gray-800">
+  <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8 xl:py-24">
+    <div class="max-w-7xl items-end justify-between sm:flex sm:pe-6 lg:pe-8">
+      <h2 class="max-w-xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
+        {title}
+      </h2>
+    </div>
+
+    <div class="mt-8 flex flex-wrap">
+      <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+        <blockquote class="flex h-full flex-col justify-between bg-gray p-6 shadow-sm sm:p-8 lg:p-12">
+          <Card1 title='Como hacer tu cv competitivo' body='Prepárate para la búsqueda de oportunidades laborales' by='Ana Lisa' href='/img/cv.jpeg'></Card1>
+        </blockquote>
+      </div>
+
+      <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+        <blockquote class="flex h-full flex-col justify-between bg-gray p-6 shadow-sm sm:p-8 lg:p-12">
+          <Card1 title='Cómo crear una carta de presentación irresistible' body='Consejos para escribir una carta que destaque entre miles' by='Alan Turingo' href='/img/carta.jpeg'></Card1>
+        </blockquote>
+      </div>
+
+      <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+        <blockquote class="flex h-full flex-col justify-between bg-gray p-6 shadow-sm sm:p-8 lg:p-12">
+          <Card1 title='Los secretos para una entrevista memorable' body='Estrategias para dejar una buena impresión sin estrés' by='Beto Éxito' href='/img/entrevista.jpg'></Card1>
+        </blockquote>
+      </div>
+
+      <div class="w-full px-4 lg:w-1/2 xl:w-1/2">
+        <blockquote class="flex h-full flex-col justify-between bg-gray p-6 shadow-sm sm:p-8 lg:p-12">
+          <Card1 title='Cómo preparar un portafolio que cause impacto' body='Guía para mostrar tu trabajo de la mejor manera' by='Lalo Creativo' href='/img/portafolio.jpeg'></Card1>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>

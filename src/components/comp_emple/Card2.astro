@@ -1,0 +1,34 @@
+---
+interface Props {
+  title?: string;
+  body?: string;
+  href?: string;
+  by?: string;
+}
+
+const { href, title, body, by } = Astro.props;
+---
+<div class="h-full w-full mx-auto">
+  <a href="#" class="group relative block h-full bg-black rounded-lg overflow-hidden">
+    <img
+      alt=""
+      src={href}
+      class="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+    />
+  
+    <div class="relative h-full w-full p-4 md:p-6 lg:p-8 flex flex-col justify-between bg-black/30">
+      <div>
+        <p class="text-sm md:text-base font-medium uppercase tracking-widest text-pink-500 px-3 py-1 rounded">{title}</p>
+        <p class="text-xl md:text-2xl lg:text-3xl font-bold text-white">{by}</p>
+      </div>
+  
+      <div class="transform transition-all group-hover:translate-y-0">
+        <div class="opacity-0 transition-opacity group-hover:opacity-100">
+          <p class="text-base md:text-lg text-white">
+            {body}
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

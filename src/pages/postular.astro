@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+<Layout title="Home">
+<main>
+
+<nav aria-label="Breadcrumb ">
+    <ol class="flex items-center gap-1 text-sm text-white pt-4">
+      <li>
+        <a href="#" class="block transition hover:text-gray-700">
+          <span class="sr-only"> Home </span>
+  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="size-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            />
+          </svg>
+        </a>
+      </li>
+  
+      <li class="rtl:rotate-180">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-4"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </li>
+  
+      <li>
+        <a href="#" class="block transition hover:text-gray-700"> Empleos </a>
+      </li>
+  
+      <li class="rtl:rotate-180">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="size-4"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </li>
+  
+      <li>
+        <a href="#" class="block transition hover:text-gray-700"> Practica para recepción y reservas </a>
+      </li>
+    </ol>
+  </nav>
+
+
+<!-- Page title -->
+
+<div class="container mx-auto p-6">
+    <!-- Post Bilgileri -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+      <img class="w-full h-72 object-cover" src="/img/hotel1.jpeg" alt="Post Foto">
+      <div class="p-6">
+
+        <h1 class="text-3xl font-bold mb-4">Practica para recepción y reservas </h1>
+        <p class="text-gray-600 text-lg mb-4">Chile | Turismo, Restaurantes y Entretenimiento.</p>
+        <div class="text-sm text-gray-500 flex justify-between items-center mb-4">
+          <span>Publicado el: 10 de Nov, 2024</span>
+          <span>Providencia, Región Metropolitana, Chile</span>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-6">
+            <!-- Imagen de perfil -->
+            <img class="w-24 h-24 rounded-full object-cover sm:mr-4" src="/logocatt.svg" alt="User Profile">
+        
+            <div class="sm:mt-0 mt-4">
+                <p class="font-medium text-gray-900">Empresa: Hotel Los Españoles</p>
+                <p class="text-sm text-gray-500">Comentarios: 5, Vistas: 123</p>
+            </div>
+        
+            <div class="flex justify-between w-full mt-4 sm:mt-0 sm:ml-4">
+                <div></div> <!-- Empty div to push the button to the end -->
+                <button type="submit" class="px-8 py-4 bg-blue-500 text-white font-extrabold rounded-lg hover:bg-blue-600">
+                    Postular
+                </button>
+            </div>
+        </div>
+              </div>
+      
+    </div>
+
+
+    <section class="bg-white rounded-t-xl">
+        <div class="py-4 px-2 mx-auto max-w-screen-xl sm:py-4 lg:px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 h-full">
+                <div class="col-span-2 sm:col-span-1 md:col-span-2 bg-gray-50 h-auto md:h-full flex flex-col">
+                    <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+                        <img src="/img/ph1.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                        <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Comedor</h3>
+                    </a>
+                </div>
+                <div class="col-span-2 sm:col-span-1 md:col-span-2 bg-stone-50">
+                    <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 mb-4">
+                        <img src="/img/ph2.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                        <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Recepción</h3>
+                    </a>
+                    <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-2">
+                        <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+                            <img src="/img/ph3.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Bar</h3>
+                        </a>
+                        <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40">
+                            <img src="/img/ph4.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                            <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Patio</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-span-2 sm:col-span-1 md:col-span-1 bg-sky-50 h-auto md:h-full flex flex-col">
+                    <a href="" class="group relative flex flex-col overflow-hidden rounded-lg px-4 pb-4 pt-40 flex-grow">
+                        <img src="/img/ph5.jpg" alt="" class="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out">
+                        <div class="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
+                        <h3 class="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">Entrada</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+
+
+  
+    <!-- Yorum Alanı -->
+    <div class="bg-white shadow-lg rounded-lg p-6">
+      <h2 class="text-2xl font-bold mb-4">Descripción</h2>
+      <!-- Yorumlar Listesi -->
+      <div class="space-y-4 mb-6">
+        <!-- Tek Yorum -->
+        <div class="p-4 bg-gray-100 rounded-lg">
+          <p class="text-gray-700">Estamos en busca de un practicante para el área de recepción y reservas en nuestro destacado hotel Los Españoles Plus, ubicado en el corazón de Providencia. Esta es una oportunidad única para sumergirte en el dinámico mundo de la hospitalidad y adquirir experiencia práctica en un ambiente profesional y acogedor. 
+            <br> <br>
+
+            Nuestro hotel cuenta con 40 amplias habitaciones y ofrece una experiencia de calidad cuatro estrellas, lo que te permitirá interactuar con huéspedes de diversas nacionalidades y perfiles. Serás parte de un equipo comprometido con la excelencia en el servicio, lo que te brindará la oportunidad de aprender sobre atención al cliente, gestión de reservas y operaciones diarias del hotel.
+            <br> <br>
+            
+            Entre tus responsabilidades estarán la atención al público, la gestión de reservas mediante nuestro sistema de software interno, y la colaboración en la coordinación del servicio al cliente. Estarás en la primera línea de atención, por lo que tu capacidad de comunicación y empatía serán clave para lograr una experiencia memorable para nuestros huéspedes.
+            <br> <br>
+            Como parte de nuestro equipo, tendrás acceso a una serie de beneficios, incluyendo uso de nuestras instalaciones como piscina y spa, así como tarifas preferenciales en nuestro bar y restorán. Además, contarás con un ambiente de trabajo colaborativo que fomenta el crecimiento personal y profesional.
+            <br> <br>
+            Si eres una persona proactiva, con ganas de aprender y contribuir a un equipo dinámico, te invitamos a postularte para esta práctica en Hotel Los Españoles Plus. Con nosotros, no solo mejorarás tus habilidades técnicas, sino que también te sumergirás en la cultura de la hospitalidad de alto nivel. ¡Esperamos conocerte pronto!</p>
+          <div class="flex justify-between items-center text-sm text-gray-500 mt-2">
+
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-full">
+            <div class="bg-white overflow-hidden  w shadow rounded-lg border">
+                <div class="px-4 py-5 sm:px-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                            Detalles
+                        </h3>
+                        
+                    </div>
+                    <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                        Información importante sobre la oferta de trabajo.
+                    </p>
+                </div>
+                <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+                    <!-- First box content -->
+                    <dl class="sm:divide-y sm:divide-gray-200">
+                        <!-- Keep existing dl content -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Tipo de oferta 
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Práctica
+                            </dd>
+                        </div>
+                        <!-- ... rest of the fields ... -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Ubicación
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Providencia, Región Metropolitana, Chile
+                            </dd>
+                        </div>
+                         <!-- ... rest of the fields ... -->
+                         <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Área de trabajo
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Gastronomía y hotelería
+                            </dd>
+                        </div>
+                        <!-- ... rest of the fields ... -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Tipo de cargo
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Practicante
+                            </dd>
+                        </div>
+                        <!-- ... rest of the fields ... -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Jornada
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Completa
+                            </dd>
+                        </div>
+                        <!-- ... rest of the fields ... -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Contrato
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Plazo fijo
+                            </dd>
+                        </div>
+                        
+                    </dl>
+                    
+                </div>
+            </div>
+
+            <div class="bg-white overflow-hidden shadow rounded-lg border">
+                <div class="px-4 py-5 sm:px-6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                            Requisitos
+                        </h3>
+                       
+                    </div>
+                    <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                        The contact information is provided below.
+                    </p>
+                </div>
+                <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+                    <!-- Second box content -->
+                    <dl class="sm:divide-y sm:divide-gray-200">
+                        <!-- Keep existing dl content -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Carrera(s)
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                |Turismo y Hotelería |Administración Hotelera | Tourism & hospitality | Turismo técnico | Técnico en turismo y hotelería |
+
+                            </dd>
+                        </div>
+                        <!-- ... rest of the fields ... -->
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Experiencia laboral
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                                Indiferente (de 0 a más de 20 años de experiencia)
+
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Idioma(s)
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                               | Inglés (Intermedio) | Portugués (Básico) |
+
+
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+            
+                
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Başka Yorumlar buraya eklenir -->
+      </div>
+      <!-- Yorum Ekleme Formu -->
+    <form class="space-y-4">
+      <div>
+        <label for="salary" class="block mb-2 text-sm font-medium text-gray-700">Renta líquida esperada (CLP)</label>
+        <input 
+        type="number" 
+        id="salary"
+        name="salary"
+        min="0"
+        step="10000"
+        class="w-full p-4 text-gray-700 border border-gray-300 rounded-lg" 
+        placeholder="Ingrese el monto en pesos chilenos"
+        required
+        >
+      </div>
+      <div class="flex justify-center pb-5">
+        <button type="submit" class="px-4 py-2 bg-blue-500  text-white rounded-lg hover:bg-blue-600">Enviar postulación</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+</main>
+</Layout>

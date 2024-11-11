@@ -1,0 +1,69 @@
+---
+import Login from './Login.astro'
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="/logocatt.svg" class="w-24 h-38 rounded-full" alt="Flowbite Logo" />
+        
+    </a>
+    
+    <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+        
+        
+        <div class="relative">
+            <button id="expandButton" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Ingresar/Registro</button>
+            <div id="expandMenu" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg dark:bg-gray-800 hidden z-50">
+            <a href="#" class="text-center block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-modal-target="authentication-modal-1" data-modal-toggle="authentication-modal-1">Empresas</a>
+            <a href="#" class="text-center block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-modal-target="authentication-modal-2" data-modal-toggle="authentication-modal-2">Profesionales</a>
+            <a href="#" class="text-center block px-4 py-2 text-gray-800 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" data-modal-target="authentication-modal-3" data-modal-toggle="authentication-modal-3">Docentes</a>
+            </div>
+        </div>
+
+        
+        <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+    <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <li>
+          <a href="/" class={`block py-2 px-3 md:p-0 rounded md:bg-transparent ${currentPath === '/' ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`} aria-current="page">Home</a>
+        </li>
+        <li>
+            <a href="/Empleos" class={`block py-2 px-3 md:p-0 rounded md:bg-transparent ${currentPath.startsWith('/Empleos') ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>Empleos</a>
+          </li>
+       <!-- <li>
+          <a href="/Foro" class={`block py-2 px-3 md:p-0 rounded md:bg-transparent ${currentPath === '/Foro' ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>Foros</a>
+        </li>-->
+        <li>
+          <a href="/Escribir_opinion" class={`block py-2 px-3 md:p-0 rounded md:bg-transparent ${currentPath === '/Escribir_opinion' ? 'text-white bg-blue-700 md:text-blue-700 md:dark:text-blue-500' : 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700'}`}>Escribir opinión</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+  
+
+  <script>
+    const expandButton = document.getElementById('expandButton');
+    if (expandButton) {
+        expandButton.addEventListener('click', function() {
+            const menu = document.getElementById('expandMenu');
+            if (menu) {
+                menu.classList.toggle('hidden');
+            }
+        });
+    }
+</script>
+
+
+<Login id="1" title="Iniciar sesión como Empresa"></Login>
+<Login id="2" title="Iniciar sesión como Profesional"></Login>
+<Login id="3" title="Iniciar sesión como Docente"></Login>
