@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/layout_empresa.astro';
+
+---
+
+<Layout title="Home">
+
+
+    <div class="container mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+        <h1 class="text-2xl font-semibold mb-6 text-gray-800">Práctica Laboral - Gastronomía y Hotelería</h1>
+    
+        <!-- Formulario -->
+        <form class="grid gap-6 md:grid-cols-2">
+    
+            <!-- Título -->
+            <div class="col-span-full">
+                <label for="titulo" class="block text-gray-700 font-medium">Título de la Práctica Laboral</label>
+                <input type="text" id="titulo" placeholder="Ej. Practicante en Gastronomía" class="w-full border border-gray-300 rounded-lg p-2 mt-1" />
+            </div>
+    
+            <!-- Descripción -->
+            <div class="col-span-full">
+                <label for="descripcion" class="block text-gray-700 font-medium">Descripción</label>
+                <textarea id="descripcion" placeholder="Descripción detallada de la práctica" class="w-full border border-gray-300 rounded-lg p-2 mt-1 h-24 resize-none"></textarea>
+            </div>
+    
+            <!-- Tipo de Oferta -->
+            <div>
+                <label for="tipo_oferta" class="block text-gray-700 font-medium">Tipo de Oferta</label>
+                <select id="tipo_oferta" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Práctica</option>
+                    <option>Trabajo Temporal</option>
+                    <option>Trabajo Permanente</option>
+                </select>
+            </div>
+    
+            <!-- Ubicación -->
+            <div>
+                <label for="ubicacion" class="block text-gray-700 font-medium">Ubicación</label>
+                <input type="text" id="ubicacion" placeholder="Ej. Providencia, Región Metropolitana" class="w-full border border-gray-300 rounded-lg p-2 mt-1" />
+            </div>
+    
+            <!-- Área de Trabajo -->
+            <div>
+                <label for="area_trabajo" class="block text-gray-700 font-medium">Área de Trabajo</label>
+                <select id="area_trabajo" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Gastronomía y Hotelería</option>
+                    <option>Administración de Empresas</option>
+                    <option>Marketing</option>
+                    <option>Turismo</option>
+                    <option>Recursos Humanos</option>
+                </select>
+            </div>
+    
+            <!-- Tipo de Cargo -->
+            <div>
+                <label for="tipo_cargo" class="block text-gray-700 font-medium">Tipo de Cargo</label>
+                <select id="tipo_cargo" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Practicante</option>
+                    <option>Auxiliar</option>
+                    <option>Asistente</option>
+                    <option>Supervisor</option>
+                </select>
+            </div>
+    
+            <!-- Jornada -->
+            <div>
+                <label for="jornada" class="block text-gray-700 font-medium">Jornada</label>
+                <select id="jornada" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Completa</option>
+                    <option>Media</option>
+                    <option>Part Time</option>
+                </select>
+            </div>
+    
+            <!-- Contrato -->
+            <div>
+                <label for="contrato" class="block text-gray-700 font-medium">Contrato</label>
+                <select id="contrato" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Plazo Fijo</option>
+                    <option>Indefinido</option>
+                    <option>Freelance</option>
+                </select>
+            </div>
+    
+            <!-- Carrera(s) -->
+            <div class="col-span-full">
+                <label for="carrera" class="block text-gray-700 font-medium">Carrera(s)</label>
+                <select id="carrera" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option>Turismo y Hotelería</option>
+                    <option>Administración Hotelera</option>
+                    <option>Tourism & Hospitality</option>
+                    <option>Turismo Técnico</option>
+                    <option>Técnico en Turismo y Hotelería</option>
+                </select>
+            </div>
+    
+            <!-- Idioma(s) -->
+            <div class="col-span-full">
+                <label for="idiomas" class="block text-gray-700 font-medium">Idioma(s)</label>
+                <select id="idiomas" multiple class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <option value="ingles">Inglés (Intermedio)</option>
+                    <option value="portugues">Portugués (Básico)</option>
+                    <option value="frances">Francés (Básico)</option>
+                    <option value="aleman">Alemán (Principiante)</option>
+                    <option value="italiano">Italiano (Básico)</option>
+                    <option value="japones">Japonés (Principiante)</option>
+                    <option value="chino">Chino (Básico)</option>
+                </select>
+            </div>
+    
+            <!-- Botones -->
+            <div class="col-span-full  flex justify-end gap-4">
+                <button type="reset" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-lg">Cancelar</button>
+                <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg">Guardar</button>
+            </div>
+        </form>
+    </div>
+    
+</Layout>

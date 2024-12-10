@@ -1,0 +1,242 @@
+---
+import Layout from '../../layouts/layout_empresa.astro';
+
+---
+
+<Layout title="Home">
+
+<div class="flex items-center justify-between mx-6 mt-4">
+  <h1 class="text-3xl font-extrabold">Empleos</h1>
+  <button class="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">
+    <a href="/empresa/newjob" class="flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd" />
+      </svg>
+      Nuevo Empleo
+    </a>
+  </button>
+</div>
+
+
+
+
+
+<div class="sm:hidden ">
+  <label for="tabs" class="sr-only">Select menu</label>
+  <select id="tabs" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+    <option>Abiertos (2)</option>
+    <option>Pendiente de revisión (2)</option>
+    <option>Necesitan cambios</option>
+    <option>Borradores</option>
+    <option>Cerrados</option>
+    <option>Acciones</option>
+  </select>
+</div>
+<ul class="hidden text-sm font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400 pt-6">
+  <li class="w-full focus-within:z-10">
+      <a href="#" class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Abiertos (2)</a>
+  </li>
+  <li class="w-full focus-within:z-10">
+      <a href="#" class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Pendiente de revisión (2)</a>
+  </li>
+  <li class="w-full focus-within:z-10">
+      <a href="#" class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Necesitan cambios</a>
+  </li>
+  <li class="w-full focus-within:z-10">
+      <a href="#" class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Borradores</a>
+  </li>
+  <li class="w-full focus-within:z-10">
+    <a href="#" class="inline-block w-full p-4 bg-white border-s-0 border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Cerrados</a>
+</li>
+</ul>
+
+
+
+<div class="container mx-auto p-6  mt-6 bg-gray-400 rounded-xl ">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex gap-2 my-2">
+            <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-green-500 py-2 px-3.5 align-baseline font-sans text-xs font-bold uppercase leading-none text-white">
+                <div class="mt-px">Practica</div>
+            </div>
+        </div>
+
+        <div class="relative inline-block text-left">
+            <button class="w-full md:w-auto flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" id="dropdownButton">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+                Acciones
+            </button>
+            <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" id="dropdownMenu">
+                <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Modificar empleo</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Cerrar postulación</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Duplicar empleo</a>
+                    <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 text-red-600" role="menuitem">Eliminar empleo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Title -->
+    <div class="flex items-center justify-between mx-6 mt-4 pb-5">
+        <h1 class="text-3xl text-black font-extrabold">Practica para recepción y reservas</h1>
+
+        
+
+       
+          
+          <script>
+            document.getElementById('dropdownButton')!.addEventListener('click', function() {
+              document.getElementById('dropdownMenu')!.classList.toggle('hidden');
+            });
+          </script>
+          
+      </div>
+      <div class="px-5">
+          <p class="text-gray-100 text-2xl ">Chile | Turismo, Restaurantes y Entretenimiento</p>
+          <p class="text-gray-100 text-2xl pb-5">Publicada el 11 de Nov, 2024</p>
+      </div>
+      
+      
+    
+    <!-- Grid of Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Invitaciones sugeridas</h2>
+        <p class="text-3xl font-bold text-blue-600">40</p>
+        <p class="text-sm text-gray-500 mt-2">↑ 12% desde el mes pasado</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Aplicantes</h2>
+        <p class="text-3xl font-bold text-green-600">15</p>
+        <p class="text-sm text-gray-500 mt-2">↑ 1% desde el mes pasado</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Seleccionados</h2>
+        <p class="text-3xl font-bold text-purple-600">23</p>
+        
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Descartados</h2>
+        <p class="text-3xl font-bold text-orange-600">2</p>
+        
+      </div>
+      
+    </div>
+
+
+    
+<label class="inline-flex items-center cursor-pointer">
+    <input type="checkbox" value="" class="sr-only peer" checked>
+    <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-50">Publicado (recibiendo postulaciones)</span>
+  </label>
+
+  
+    
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="container mx-auto p-6  mt-6 bg-gray-400 rounded-xl ">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex gap-2 my-2">
+            <div class="center relative inline-block select-none whitespace-nowrap rounded-lg bg-green-500 py-2 px-3.5 align-baseline font-sans text-xs font-bold uppercase leading-none text-white">
+                <div class="mt-px">Practica</div>
+            </div>
+        </div>
+
+        <div class="relative inline-block text-left">
+            <button class="w-full md:w-auto flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" id="dropdownButton2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            Acciones
+            </button>
+            <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" id="dropdownMenu2">
+            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="dropdownButton2">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Modificar empleo</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Cerrar postulación</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Duplicar empleo</a>
+                <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 text-red-600" role="menuitem">Eliminar empleo</a>
+            </div>
+            </div>
+        </div>
+        </div>
+        <!-- Title -->
+        <div class="flex items-center justify-between mx-6 mt-4 pb-5">
+        <h1 class="text-3xl text-black font-extrabold">Practica para recepción y reservas</h1>
+          
+          <script>
+            document.getElementById('dropdownButton2')!.addEventListener('click', function() {
+              document.getElementById('dropdownMenu2')!.classList.toggle('hidden');
+            });
+          </script>
+      </div>
+      <div class="px-5">
+          <p class="text-gray-100 text-2xl ">Chile | Turismo, Restaurantes y Entretenimiento</p>
+          <p class="text-gray-100 text-2xl pb-5">Publicada el 11 de Nov, 2024</p>
+      </div>
+      
+      
+    
+    <!-- Grid of Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Invitaciones sugeridas</h2>
+        <p class="text-3xl font-bold text-blue-600">60</p>
+        <p class="text-sm text-gray-500 mt-2">↑ 12% desde el mes pasado</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Aplicantes</h2>
+        <p class="text-3xl font-bold text-green-600">135</p>
+        <p class="text-sm text-gray-500 mt-2">↑ 8% desde el mes pasado</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Seleccionados</h2>
+        <p class="text-3xl font-bold text-purple-600">23</p>
+        
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 border">
+        <h2 class="text-xl font-semibold text-gray-700 mb-2">Descartados</h2>
+        <p class="text-3xl font-bold text-orange-600">60</p>
+        
+      </div>
+      
+    </div>
+
+
+    
+<label class="inline-flex items-center cursor-pointer">
+    <input type="checkbox" value="" class="sr-only peer" checked>
+    <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-50">Publicado (recibiendo postulaciones)</span>
+  </label>
+
+  
+    
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+</Layout>

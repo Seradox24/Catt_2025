@@ -1,0 +1,163 @@
+---
+import Layout from '../../layouts/layout_empresa.astro';
+
+---
+
+<Layout title="Home">
+
+
+
+    
+
+    <section class="w-full overflow-hidden dark:bg-gray-900">
+        <div class="flex flex-col">
+            <!-- Cover Image -->
+            
+
+<div class="w-full  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex justify-end px-4 pt-4">
+        <button id="dropdownButton" data-dropdown-toggle="dropdown" class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5" type="button">
+            <span class="sr-only">Open dropdown</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
+            </svg>
+        </button>
+        <!-- Dropdown menu -->
+        <div id="dropdown" class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+            <ul class="py-2" aria-labelledby="dropdownButton">
+            <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Editar</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Exportar Data</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Eliminar</a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <div class="flex flex-col items-center pb-10">
+        <img class="w-auto h-64 mb-3 rounded-2xl shadow-lg" src="/img/hotel1.jpeg" alt="Bonnie image"/>
+        <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">Hotel Los Españoles</h5>
+        <span class="text-sm text-gray-500 dark:text-gray-400">Hoteleria</span>
+        <div class="flex mt-4 md:mt-6">
+            </div>
+            <button class="ml-2  inline-flex items-center px-3 py-1 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                </svg>
+                Guardar Cambios
+            </button>
+    </div>
+</div>
+
+
+
+            
+    
+            <div
+                class="xl:w-[80%] lg:w-[90%] md:w-[90%] sm:w-[92%] xs:w-[90%] mx-auto flex flex-col gap-4 items-center relative lg:-top-8 md:-top-6 sm:-top-4 xs:-top-4">
+                <!-- Description -->
+                <p class="w-fit text-xl pt-10 text-white dark:text-white text-md">Somos un hotel de 40 habitaciones, ubicado en providencia. Hotel de 4 estrellas con amplias habitaciones, contamos con servicios de bar y restorán.
+
+                    contamos con estacionamiento subterráneo, piscina, spa y wifi en todo el hotel</p>
+    
+    
+                <!-- Detail -->
+                <div class="w-full my-auto py-6 flex flex-col justify-center gap-2">
+                    <div class="w-full flex flex-col sm:flex-row gap-2 justify-center">
+                        <!-- Columna de Información General -->
+                        <div class="w-full">
+                            <dl class="text-gray-900 divide-y px-6 divide-gray-200 dark:text-white dark:divide-gray-700">
+                                <!-- Nombre de la Empresa (solo visualización) -->
+                                <div class="flex flex-col pb-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Nombre de la Empresa</dt>
+                                    <dd class="text-lg font-semibold">Turismo y Hotelería | Hotel Los Españoles</dd>
+                                </div>
+                                <!-- RUT (solo visualización) -->
+                                <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">RUT</dt>
+                                    <dd class="text-lg font-semibold">76.123.456-7</dd>
+                                </div>
+                                <!-- Fecha de Fundación (solo visualización) -->
+                                <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Fecha de Fundación</dt>
+                                    <dd class="text-lg font-semibold">15/04/2005</dd>
+                                </div>
+                                <!-- Tipo de Empresa (solo visualización) -->
+                                <div class="flex flex-col py-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Tipo de Empresa</dt>
+                                    <dd class="text-lg font-semibold">Turismo y Hotelería</dd>
+                                </div>
+                            </dl>
+                        </div>
+                        
+                        <!-- Columna de Información Editable -->
+                        <div class="w-full">
+                            <dl class="text-gray-900 divide-y divide-gray-200 dark:text-white dark:divide-gray-700">
+                                <div class="flex flex-col pt-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">ACERCA DE</dt>
+                                    <dd>
+                                        <input  type="url" class="text-lg font-semibold w-full  text-black border-gray-300 rounded-md" value="Somos un hotel de 40 habitaciones, ubicado en providencia. Hotel de 4 estrellas con amplias habitaciones, contamos con servicios de bar y restorán. contamos con estacionamiento subterráneo, piscina, spa y wifi en todo el hotel">
+                                    </dd>
+                                </div>
+                                <!-- Ubicación (editable) -->
+                                <div class="flex flex-col pb-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Ubicación</dt>
+                                    <dd>
+                                        <input type="text" class="text-lg font-semibold w-full  text-black border-gray-300 rounded-md" value="Chile, Santiago">
+                                    </dd>
+                                </div>
+                                <!-- Número de Teléfono (editable) -->
+                                <div class="flex flex-col pt-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Número de Teléfono</dt>
+                                    <dd>
+                                        <input type="text" class="text-lg font-semibold w-full  text-black border-gray-300 rounded-md" value="+56 9 1234 5678">
+                                    </dd>
+                                </div>
+                                <!-- Correo Electrónico (editable) -->
+                                <div class="flex flex-col pt-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Correo Electrónico</dt>
+                                    <dd>
+                                        <input type="email" class="text-lg font-semibold w-full  text-black border-gray-300 rounded-md" value="contacto@andes.turismo.com">
+                                    </dd>
+                                </div>
+                                <!-- Sitio Web (editable) -->
+                                <div class="flex flex-col pt-3">
+                                    <dt class="mb-1 text-gray-500 md:text-lg dark:text-gray-400">Sitio Web</dt>
+                                    <dd>
+                                        <input type="url" class="text-lg font-semibold w-full  text-black border-gray-300 rounded-md" value="https://www.turismoandes.cl">
+                                    </dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="my-10 lg:w-[70%] md:h-[14rem] xs:w-full xs:h-[10rem]">
+                        <!--  -->
+                        <h1
+                            class="w-fit font-serif  my-4 pb-5 pr-2 rounded-b-md border-b-4 border-blue-600 dark:border-b-4 dark:border-yellow-600 dark:text-white lg:text-4xl md:text-3xl xs:text-xl">
+                            Locación de la empresa
+                            </h1>
+    
+                        <!-- Location -->
+                        
+
+                            <iframe class="rounded-lg w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Providencia,%20Regi%C3%B3n%20Metropolitana,%20Chile+(Hotel%20los%20espa%C3%B1oles)&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+    </iframe>
+    
+                    </div>
+                </div>
+    
+                <!-- Social Links -->
+                
+    
+            </div>
+        </div>
+    </section>
+    
+
+</Layout>
